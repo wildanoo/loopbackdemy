@@ -1,32 +1,24 @@
 {
-  "name": "Section",
+  "name": "Comment",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "title": {
+    "date": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "body": {
       "type": "string",
       "required": true
-    },
-    "shortDesc": {
-      "type": "string"
-    },
-    "fullDesc": {
-      "type": "string"
-    },
-    "picture": {
-      "type": "string"
-    },
-    "introVideo": {
-      "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "lessons": {
-      "type": "hasMany",
+    "lesson": {
+      "type": "belongsTo",
       "model": "Lesson",
       "foreignKey": ""
     }

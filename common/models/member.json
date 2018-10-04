@@ -1,33 +1,26 @@
 {
-  "name": "Section",
+  "name": "Member",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "shortDesc": {
-      "type": "string"
-    },
-    "fullDesc": {
-      "type": "string"
-    },
     "picture": {
       "type": "string"
     },
-    "introVideo": {
+    "signature": {
+      "type": "string"
+    },
+    "country": {
       "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "lessons": {
-      "type": "hasMany",
-      "model": "Lesson",
+    "users": {
+      "type": "hasOne",
+      "model": "User",
       "foreignKey": ""
     }
   },

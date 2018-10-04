@@ -1,5 +1,5 @@
 {
-  "name": "Section",
+  "name": "Item",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -10,24 +10,18 @@
       "type": "string",
       "required": true
     },
-    "shortDesc": {
-      "type": "string"
+    "price": {
+      "type": "number"
     },
-    "fullDesc": {
-      "type": "string"
-    },
-    "picture": {
-      "type": "string"
-    },
-    "introVideo": {
-      "type": "string"
+    "tax": {
+      "type": "number"
     }
   },
   "validations": [],
   "relations": {
-    "lessons": {
-      "type": "hasMany",
-      "model": "Lesson",
+    "order": {
+      "type": "belongsTo",
+      "model": "Order",
       "foreignKey": ""
     }
   },
